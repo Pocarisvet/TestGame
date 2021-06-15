@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGame", "TestGame\TestGame.vcxproj", "{63931F85-AB9D-44A6-AA3E-A390F3C71439}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hunter", "Hunter\Hunter.vcxproj", "{A55A0FA1-C10B-4C3E-99D3-9117147FC38F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63931F85-AB9D-44A6-AA3E-A390F3C71439}.Debug|x64.ActiveCfg = Debug|x64
+		{63931F85-AB9D-44A6-AA3E-A390F3C71439}.Debug|x64.Build.0 = Debug|x64
+		{63931F85-AB9D-44A6-AA3E-A390F3C71439}.Release|x64.ActiveCfg = Release|x64
+		{63931F85-AB9D-44A6-AA3E-A390F3C71439}.Release|x64.Build.0 = Release|x64
+		{A55A0FA1-C10B-4C3E-99D3-9117147FC38F}.Debug|x64.ActiveCfg = Debug|x64
+		{A55A0FA1-C10B-4C3E-99D3-9117147FC38F}.Debug|x64.Build.0 = Debug|x64
+		{A55A0FA1-C10B-4C3E-99D3-9117147FC38F}.Release|x64.ActiveCfg = Release|x64
+		{A55A0FA1-C10B-4C3E-99D3-9117147FC38F}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B89FB53-DF9F-4910-9D47-2EA717665A2F}
+	EndGlobalSection
+EndGlobal
