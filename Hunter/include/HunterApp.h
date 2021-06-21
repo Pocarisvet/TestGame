@@ -1,6 +1,7 @@
 #pragma once
 
-#include <HunterCentral.h>
+#include "HunterCentral.h"
+#include "Window.h"
 
 namespace Hunter
 {
@@ -10,9 +11,14 @@ namespace Hunter
 			void RunGame();
 			static HunterApp* GetApplication();
 			static void Init();
+			virtual ~HunterApp();
+
 		private:
 			HunterApp();
+
 			inline static HunterApp* instance{ nullptr };
+
+			Hunter::Window* appWindow{ nullptr };
 	};
 }
 

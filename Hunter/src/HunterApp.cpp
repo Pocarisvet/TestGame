@@ -1,5 +1,6 @@
 #include <pch.h>
 #include "HunterApp.h"
+#include "WindowsWindow.h"
 
 namespace Hunter
 {
@@ -9,7 +10,8 @@ namespace Hunter
 
 		while (true)
 		{
-
+			appWindow->SwapBufferes();
+			appWindow->PollForEvent();
 		}
 	}
 
@@ -20,7 +22,7 @@ namespace Hunter
 
 	void HunterApp::Init()
 	{
-		if (instance != nullptr)
+		if (instance == nullptr)
 			instance = new HunterApp;
 	}
 
@@ -28,5 +30,17 @@ namespace Hunter
 	{
 		assert(instance == nullptr);
 
+#ifdef _HUNTER_WINDOWS
+		appWindow = new WindowsWindow;
+#else
+	#Windows_supported_only
+#endif
+		bool success{ appWindow->CreateWindow(800, 600) };
+		assert(success);
+	}
+
+	HunterApp::~HunterApp()
+	{
+		appWindow->DeleteWindow();
 	}
 }
