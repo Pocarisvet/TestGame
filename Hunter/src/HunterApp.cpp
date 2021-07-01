@@ -1,15 +1,23 @@
 #include <pch.h>
 #include "HunterApp.h"
 #include "WindowsWindow.h"
+#include "Renderer.h"
+#include "Sprite.h"
 
 namespace Hunter
 {
 	void HunterApp::RunGame()
 	{
-		HLOG("Starting the game")
+		HLOG("Start the game");
+		
+		Renderer::Init();
+
+		Sprite test1{"../Hunter/assets/sprites/earth.png"};
 
 		while (true)
 		{
+			Renderer::Draw(test1, 100, 100, test1.GetWidth(), test1.GetHeight());
+
 			appWindow->SwapBufferes();
 			appWindow->PollForEvent();
 		}
@@ -42,5 +50,15 @@ namespace Hunter
 	HunterApp::~HunterApp()
 	{
 		appWindow->DeleteWindow();
+	}
+
+	int HunterApp::GetWindowWidth()
+	{
+		return instance->appWindow->GetWidth();
+	}
+
+	int HunterApp::GetWindowHeight()
+	{
+		return instance->appWindow->GetHeight();
 	}
 }

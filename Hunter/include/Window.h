@@ -11,5 +11,7 @@ namespace Hunter
 		virtual void DeleteWindow() = 0;
 		virtual void SwapBufferes() = 0;
 		virtual void PollForEvent() = 0;
+		virtual int GetWidth() const = 0;
+		virtual int GetHeight() const = 0;
 	};
 }
