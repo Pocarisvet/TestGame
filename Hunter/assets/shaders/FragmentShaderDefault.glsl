@@ -1,5 +1,5 @@
 #version 330 core
-	in vec2 textCoord;
+	in vec2 texCoord;
 
 	out vec4 FragColor;
 
@@ -7,5 +7,5 @@
 
 	void main()
 	{
-		FragColor = texture(ourTexture, textCoord);
+		FragColor = texture(ourTexture, texCoord);
 	}

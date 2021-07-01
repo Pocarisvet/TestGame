@@ -16,7 +16,7 @@ namespace Hunter
 		virtual void Use() override;
 
 		virtual void SetVec2Int(const std::string& uniformName, int val1, int val2) override;
-		~OpenGLShdr() override;
+		virtual ~OpenGLShdr() override;
 
 	private:
 		unsigned int CompileVertexShader(const std::string& vertexCode);
