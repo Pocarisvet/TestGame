@@ -47,6 +47,8 @@ namespace Hunter
 #endif
 		bool success{ appWindow->CreateWindow(800, 600) };
 		assert(success);
+
+		appWindow->SetKeyPressedCallback([this](KeyPressedEvent& event) {OnKeyPressed(event); });
 	}
 
 	HunterApp::~HunterApp()
@@ -62,5 +64,11 @@ namespace Hunter
 	int HunterApp::GetWindowHeight()
 	{
 		return instance->appWindow->GetHeight();
+	}
+
+	void HunterApp::OnKeyPressed(KeyPressedEvent& event)
+	{
+		if(event.GetKeyCode()==GLFW_KEY_LEFT)
+			HLOG("Arrow left was pressed");
 	}
 }

@@ -167,6 +167,7 @@
     <ClInclude Include="include\Hunter.h" />
     <ClInclude Include="include\HunterApp.h" />
     <ClInclude Include="include\HunterCentral.h" />
+    <ClInclude Include="include\HunterKeys.h" />
     <ClInclude Include="include\KeyboardEvents.h" />
     <ClInclude Include="include\OpenGL\OpenGLImplementation.h" />
     <ClInclude Include="include\OpenGL\OpenGLShdr.h" />

@@ -7,6 +7,7 @@ namespace Hunter
 	class KeyPressedEvent : public Event
 	{
 	public:
+		KeyPressedEvent(int key);
 		int GetKeyCode() const;
 
 	private:
@@ -16,6 +17,7 @@ namespace Hunter
 	class KeyReleasedEvent : public Event
 	{
 	public:
+		KeyReleasedEvent(int key);
 		int GetKeyCode() const;
 
 	private:
