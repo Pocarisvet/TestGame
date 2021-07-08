@@ -12,11 +12,13 @@ namespace Hunter
 		
 		Renderer::Init();
 
-		Sprite test1{"../Hunter/assets/sprites/earth.png"};
+		Sprite test1{ "../Hunter/assets/sprites/football.png" };
+		Sprite test2{ "../Hunter/assets/sprites/earth.png" };
 
 		while (true)
 		{
 			Renderer::Draw(test1, 100, 100, test1.GetWidth(), test1.GetHeight());
+			Renderer::Draw(test2, 100, 100, test2.GetWidth(), test2.GetHeight());
 
 			appWindow->SwapBufferes();
 			appWindow->PollForEvent();
