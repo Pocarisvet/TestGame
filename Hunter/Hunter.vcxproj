@@ -163,9 +163,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Event.h" />
     <ClInclude Include="include\Hunter.h" />
     <ClInclude Include="include\HunterApp.h" />
     <ClInclude Include="include\HunterCentral.h" />
+    <ClInclude Include="include\KeyboardEvents.h" />
     <ClInclude Include="include\OpenGL\OpenGLImplementation.h" />
     <ClInclude Include="include\OpenGL\OpenGLShdr.h" />
     <ClInclude Include="include\pch.h" />
@@ -177,7 +179,9 @@
     <ClInclude Include="include\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Event.cpp" />
     <ClCompile Include="src\HunterApp.cpp" />
+    <ClCompile Include="src\KeyboardEvents.cpp" />
     <ClCompile Include="src\OpenGL\OpenGLImplementation.cpp" />
     <ClCompile Include="src\OpenGL\OpenGLShdr.cpp" />
     <ClCompile Include="src\pch.cpp" />

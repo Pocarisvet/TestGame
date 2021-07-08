@@ -14,7 +14,7 @@ namespace Hunter
 	public:
 		virtual bool CreateWindow(unsigned int width, unsigned int height) override;
 		virtual void DeleteWindow() override;
-		virtual void SwapBufferes() override;
+		virtual void SwapBuffers() override;
 		virtual void PollForEvent() override;
 		virtual int GetWidth() const override;
 		virtual int GetHeight() const override;

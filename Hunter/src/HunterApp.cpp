@@ -20,7 +20,7 @@ namespace Hunter
 			Renderer::Draw(test1, 100, 100, test1.GetWidth(), test1.GetHeight());
 			Renderer::Draw(test2, 100, 100, test2.GetWidth(), test2.GetHeight());
 
-			appWindow->SwapBufferes();
+			appWindow->SwapBuffers();
 			appWindow->PollForEvent();
 		}
 	}

@@ -26,7 +26,7 @@ namespace Hunter
 		glfwTerminate();
 	}
 
-	void WindowsWindow::SwapBufferes()
+	void WindowsWindow::SwapBuffers()
 	{
 		glfwSwapBuffers(window);
 	}
