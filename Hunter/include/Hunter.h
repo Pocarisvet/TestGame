@@ -5,6 +5,7 @@
 #include "Sprite.h"
 #include "Renderer.h"
 #include "HunterKeys.h"
+#include "KeyboardEvents.h"
 
 #define START_GAME(classname) \
 	int main() \

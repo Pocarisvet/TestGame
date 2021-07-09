@@ -20,6 +20,11 @@ public:
 	void Draw() const;
 	bool OverlapsWith(const Unit& other) const;
 
+	Unit(const Unit&) = delete;
+	Unit(Unit&&) = delete;
+	Unit& operator=(const Unit&) = delete;
+	Unit& operator=(Unit&&) = delete;
+
 private:
 	Hunter::Sprite mImage;
 	int mXcoord;

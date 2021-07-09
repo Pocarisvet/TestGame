@@ -7,7 +7,7 @@ namespace Hunter
 	{
 		glfwInit();
 
-		window = glfwCreateWindow(800, 600, "Test Window", NULL, NULL);
+		window = glfwCreateWindow(800, 800, "Test Window", NULL, NULL);
 
 		if (window == nullptr)
 			return false;
@@ -26,6 +26,13 @@ namespace Hunter
 
 				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
 				callbacks->KeyPressedCallback(event);
+			}
+			else if (action == GLFW_RELEASE)
+			{
+				KeyReleasedEvent event{ key };
+
+				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+				callbacks->KeyReleasedCallback(event);
 			}
 			});
 
@@ -71,5 +78,10 @@ namespace Hunter
 	void WindowsWindow::SetKeyPressedCallback(std::function<void(KeyPressedEvent&)> newCallback)
 	{
 		mCallbacks.KeyPressedCallback = newCallback;
+	}
+
+	void WindowsWindow::SetKeyReleasedCallback(std::function<void(KeyReleasedEvent&)> newCallback)
+	{
+		mCallbacks.KeyReleasedCallback = newCallback;
 	}
 }

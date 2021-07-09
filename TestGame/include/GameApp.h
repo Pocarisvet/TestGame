@@ -12,10 +12,13 @@ public:
 	virtual void OnUpdate() override;
 
 	virtual void OnKeyPressed(Hunter::KeyPressedEvent& event) override;
+	virtual void OnKeyReleased(Hunter::KeyReleasedEvent& event) override;
 
 private:
 	Unit mCar;
 	std::deque<Unit> mRocks;
+	Hunter::Sprite mBackground;
+	Hunter::Sprite mEndNotice;
 
 	enum class Action
 	{
@@ -23,5 +26,8 @@ private:
 		RightMove,
 		Forward
 	} mCarAction;
+
+	bool mGameEnd;
+	long long mFrameNumber;
 
 };
