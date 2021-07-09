@@ -16,13 +16,13 @@ void GameApp::OnUpdate()
 	}
 	else if (mCarAction == Action::RightMove)
 	{
-		if (mCar.GetXCoord() + mCar.Speed() < GameApp::GetWindowWidth())
+		if (mCar.GetXCoord() + mCar.GetWidth() + mCar.Speed() < GameApp::GetWindowWidth())
 			mCar.UpdateXCoord(mCar.Speed());
 		else
-			mCar.SetXCoord(GameApp::GetWindowWidth() - mCar.GetWidth());
+			mCar.SetXCoord(800 - mCar.GetWidth());
 	}
-	mCar.Draw();
 
+	mCar.Draw();
 }
 
 void GameApp::OnKeyPressed(Hunter::KeyPressedEvent& event)
