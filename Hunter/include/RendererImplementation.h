@@ -9,6 +9,7 @@ namespace Hunter
 	public:
 		virtual void Init() = 0;
 		virtual void Draw(const Sprite& image, int x_pos, int y_pos, int width, int height) = 0;
+		virtual void ClearFrame() = 0;
 		virtual ~RendererImplementation() = 0 {};
 	};
 }

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "pch.h"
 #include "HunterCentral.h"
 #include "Window.h"
 #include "KeyboardEvents.h"
@@ -8,23 +9,28 @@ namespace Hunter
 {
 	class HUNTER_API HunterApp
 	{
-		public:
-			void RunGame();
-			static HunterApp* GetApplication();
-			static void Init();
-			virtual ~HunterApp();
+	public:
+		virtual void RunGame();
+		static HunterApp* GetApplication();
+		virtual ~HunterApp();
 
-			static int GetWindowWidth();
-			static int GetWindowHeight();
+		virtual void OnUpdate();
 
-			void OnKeyPressed(KeyPressedEvent& event);
+		static int GetWindowWidth();
+		static int GetWindowHeight();
 
-		private:
-			HunterApp();
+		virtual void OnKeyPressed(KeyPressedEvent& event);
 
-			inline static HunterApp* instance{ nullptr };
+	protected:
+		HunterApp();
 
-			Hunter::Window* appWindow{ nullptr };
+	private:
+		inline static HunterApp* instance{ nullptr };
+
+		Hunter::Window* appWindow{ nullptr };
+
+		std::chrono::steady_clock::time_point mNextFrameTime;
+		std::chrono::microseconds mFrameDuration{ 16 };
 	};
 }
 

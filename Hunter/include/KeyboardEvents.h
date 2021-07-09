@@ -1,10 +1,11 @@
 #pragma once
 
+#include "HunterCentral.h"
 #include "Event.h"
 
 namespace Hunter
 {
-	class KeyPressedEvent : public Event
+	class HUNTER_API KeyPressedEvent : public Event
 	{
 	public:
 		KeyPressedEvent(int key);

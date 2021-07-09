@@ -60,6 +60,12 @@ namespace Hunter
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	}
 
+	void OpenGLImplementation::ClearFrame()
+	{
+		glClearColor(0.0, 0.0, 0.0, 1.0);
+		glClear(GL_COLOR_BUFFER_BIT);
+	}
+
 	OpenGLImplementation::~OpenGLImplementation()
 	{
 

@@ -23,6 +23,11 @@ namespace Hunter
 		instance->mDrawingEngine->Draw(image, x_pos, y_pos, width, height);
 	}
 
+	void Renderer::ClearFrame()
+	{
+		instance->mDrawingEngine->ClearFrame();
+	}
+
 	Renderer::Renderer()
 	{
 	#ifdef _HUNTER_OPENGL
